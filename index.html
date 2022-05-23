@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9a4e9c6976.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <header class="header container">
+        <div class="header__burger"></div>
+        <ul class="header__item">
+            <li class="item">ИГРЫ</li>
+            <li class="item">КНИГИ</li>
+            <li class="item">АТРИБУТИКА</li>
+        </ul>
+        <img src="/img/large_galaxygeeks.png" alt="" class="header__logo">
+        <svg class="loup" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M30 26.667L21.4108 18.0778C22.9987 15.6645 23.6347 12.7479 23.1956 9.89263C22.7566 7.03736 21.2737 4.44656 19.0342 2.62183C16.7946 0.797096 13.9576 -0.131761 11.0726 0.0150942C8.18747 0.16195 5.45949 1.37407 3.41678 3.41678C1.37407 5.45949 0.16195 8.18747 0.0150942 11.0726C-0.131761 13.9576 0.797096 16.7946 2.62183 19.0342C4.44656 21.2737 7.03736 22.7566 9.89263 23.1956C12.7479 23.6347 15.6645 22.9987 18.0778 21.4108L26.667 30L30 26.667ZM3.33583 11.6684C3.33583 7.07382 7.07382 3.33583 11.6684 3.33583C16.263 3.33583 20.0009 7.07382 20.0009 11.6684C20.0009 16.263 16.263 20.0009 11.6684 20.0009C7.07382 20.0009 3.33583 16.263 3.33583 11.6684Z"
+                fill="#233333" fill-opacity="0.5" />
+        </svg>
+
+        <ul class="header__item">
+            <li class="item item--opacity">ПОИСК</li>
+            <li class="item">ВХОД/РЕГИСТРАЦИЯ</li>
+        </ul>
+        <svg class="basket" width="45" height="30" viewBox="0 0 45 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="44.8485" height="30" fill="url(#pattern0)" />
+            <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2_25" transform="translate(0 -0.247475) scale(0.00195312 0.00291982)" />
+                </pattern>
+                <image id="image0_2_25" width="512" height="512"
+                    xlink:href="data:image/png;base64,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" />
+            </defs>
+        </svg>
+
+    </header>
+    <main class="main">
+        <section class="product-section container">
+            <div class="product-block">
+                <h2 class="product-block__title">ИГРЫ</h2>
+                <div class="swiper" id="product-line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper" id="product-line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/ps4_farcry6r 7.jpg" alt="">
+                                <span class="produc__name">FarCry 6</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <button class="product__btn">
+                    Перейти в раздел
+                </button>
+            </div>
+            <div class="product-block">
+                <h2 class="product-block__title">КНИГИ</h2>
+                <div class="swiper" id="product-line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper" id="product-line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/2880022_preview.jpg" alt="">
+                                <span class="produc__name">
+                                    Bloodborne</span>
+                                <span class="author">Кот А.</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <button class="product__btn">
+                    Перейти в раздел
+                </button>
+            </div>
+            <div class="product-block">
+                <h2 class="product-block__title">Акссесуары</h2>
+                <div class="swiper" id="product-line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper" id="product-line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="product__wrapper">
+                                <img src="/img/AC010012_1.jpeg.jpg" alt="">
+                                <span class="produc__name">Фигурка AC</span>
+                                <span class="produc__price">3999 р</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <button class="product__btn">
+                    Перейти в раздел
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer container">
+        <div class="footer__content">
+            <div class="footer__item">
+                <h3 class="item-title">Полезные ссылки</h3>
+                <div class="footer__links">
+                    <ul class="links__munu">
+                        <li class="links__list"><a href="#" class="link">Доставка</a></li>
+                        <li class="links__list"><a href="#" class="link">Оплата </a></li>
+                        <li class="links__list"><a href="#" class="link">Акции</a></li>
+                        <li class="links__list"><a href="#" class="link">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__item">
+                <h3 class="item-title">оплата</h3>
+                <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec,
+                    pellentesque.</p>
+                <div class="item__icons">
+                    <img src="/img/visa.jpg" alt="" class="icon">
+                    <img src="/img/mastercard.jpg" alt="" class="icon">
+                </div>
+            </div>
+            <div class="footer__item">
+                <h3 class="item-title">контакты</h3>
+                <div class="footer__contacts">
+                    <ul class="contacts__menu">
+                        <li class="contacts__list"><a href="#" class="contact__link">8 (812) 234-56-55</a></li>
+                        <li class="contacts__list"><a href="#" class="contact__link">8 (812) 234-56-55</a></li>
+                        <li class="contacts__list"><a href="#" class="contact__link contact__link--mail">@gameEx@</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__item">
+                <h3 class="item-title">оплата</h3>
+                <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec,
+                    pellentesque.</p>
+                <div class="item__icons">
+                    <img src="/img/yt.svg" alt="" class="icon">
+                    <img src="/img/vk.svg" alt="" class="icon">
+                    <img src="/img/f.svg" alt="" class="icon">
+                    <img src="/img/twi.svg" alt="" class="icon">
+                    <img src="/img/e.svg" alt="" class="icon">
+
+                </div>
+            </div>
+        </div>
+        <div class="footer__underline">
+            <span class="underline__item">Договор публичной офферты</span>
+            <span class="underline__item">Контрагентам</span>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
