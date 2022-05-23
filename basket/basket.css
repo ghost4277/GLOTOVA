@@ -90,11 +90,25 @@ select {
     overflow: hidden;
     font-family: "Calibri";
 }
+
 /* ------------------------Header--------------------------------------------------------------------------------------------- */
+.item-link {
+    text-decoration: none;
+    color: inherit;
+}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+.header-landing {
+    display: block;
+    width: 38%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 27%;
 }
 .header__burger {
     width: 40px;
